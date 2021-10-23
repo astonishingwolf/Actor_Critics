@@ -54,9 +54,8 @@ class PolicyGradientAgent():
     def store_reward(self,reward):
         self.reward_memory.append(reward)
         
-    def learn():
-        self.policy.optimizer.zero_grad()
-        
+    def learn(self):
+        self.policy.optimizer.zero_grad()       
         G = np.zero_like(self.reward_memory , dtype = np.float64)
         for i in range(len(self.reward_memory)):
             G_sum = 0
